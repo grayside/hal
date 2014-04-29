@@ -75,8 +75,10 @@ class HalRestWSFormatHal extends RestWSBaseFormat {
     // The alias parameter is used to ensure the alias system does not process the path.
     $links['self'] = $this->makeLink(url(substr($_SERVER['REQUEST_URI'], 1), array('absolute' => TRUE, 'alias' => TRUE)));
 
+    if (!isset($values['_links'])) {
+      $values['_links'] = array();
+    }
     $values['_links'] += $links;
-
 
     return $values;
   }
