@@ -1,0 +1,12 @@
+<?php
+
+/**
+ * Implements hook_restws_format_info_alter().
+ */
+function hal_restws_format_info_alter(&$info) {
+  $info['json'] = array(
+    'label' => t('HAL'),
+    'class' => 'HalRestWSFormatHal',
+    'mime type' => 'application/json',
+  );
+}
