@@ -4,4 +4,4 @@ core = 7.x
 version = VERSION
 
 dependencies[] = restws
-files[] = lib/Drupal/hal/Normalizer/HalRestWSFormatHal.php
+files[] = src/Normalizer/HalRestWSFormatHal.php
